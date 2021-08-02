@@ -1,0 +1,25 @@
+<!-- <a
+  (click)="onDetail()"
+  class="list-group-item clearfix"
+  style="cursor: pointer; margin-bottom: 1rem"
+> -->
+<a
+  [routerLink]="[id]"
+  routerLinkActive="active"
+  class="list-group-item clearfix"
+  style="cursor: pointer; margin-bottom: 1rem"
+>
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="pull-right">
+    <!-- src="{{ recipe.imagePath }}" -->
+    <img
+      [src]="recipe.imagePath"
+      class="img-responsive"
+      alt="{{ recipe.name }}"
+      style="max-height: 50px"
+    />
+  </span>
+</a>
